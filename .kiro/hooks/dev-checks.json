@@ -1,0 +1,24 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Syntax-check the deck",
+      "description": "After any JS file is saved, fail loudly on a syntax error before it reaches a browser.",
+      "trigger": "PostFileSave",
+      "matcher": "\\.js$",
+      "action": {
+        "type": "command",
+        "command": "node --check app.js"
+      }
+    },
+    {
+      "name": "Write the session log",
+      "description": "Appends one human-readable line to DEVLOG.md at the end of every session. This log is the raw material for the Kiro write-up in the submission.",
+      "trigger": "Stop",
+      "action": {
+        "type": "agent",
+        "prompt": "Append one line to DEVLOG.md in the format `YYYY-MM-DD | files touched | what actually changed | what I (the human) rejected or overrode`. Keep it to one line of plain text, no headings, and do not restate the diff. If nothing changed, do not write."
+      }
+    }
+  ]
+}

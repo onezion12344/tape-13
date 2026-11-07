@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+node_modules/
+
+# `.kiro/` is intentionally tracked. The hackathon requires the Kiro specs,
+# steering docs and hooks to be visible at the repository root — do not ignore it.

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TAPE 13 — a 1992 answering machine, resurrected</title>
+<meta name="description" content="A 1992 tape answering machine, resurrected in the browser. Leave a message for someone who can no longer pick up." />
+<link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<main class="room">
+  <header class="room__head">
+    <h1>TAPE 13</h1>
+    <p class="tagline">A 1992 answering machine, resurrected.</p>
+  </header>
+
+  <section class="machine" aria-label="Answering machine">
+    <div class="machine__top">
+      <div class="tape-window" aria-hidden="true">
+        <div class="tape-window__band"></div>
+        <div class="reel reel--l"><span class="reel__hub"></span></div>
+        <div class="reel reel--r"><span class="reel__hub"></span></div>
+        <div class="tape-window__glass"></div>
+      </div>
+      <div class="panel">
+        <div class="led" id="led" data-state="idle">
+          <span class="led__dot"></span>
+          <span class="led__label" id="ledLabel">STANDBY</span>
+        </div>
+        <div class="counter" id="counter" aria-live="polite">000</div>
+        <div class="msgcount"><span id="msgCount">0</span> MSG</div>
+      </div>
+    </div>
+
+    <div class="keys">
+      <button class="key" data-key="rew" type="button"><span>REW</span></button>
+      <button class="key" data-key="play" type="button"><span>PLAY</span></button>
+      <button class="key key--rec" data-key="rec" type="button"><span>REC</span></button>
+      <button class="key" data-key="stop" type="button"><span>STOP</span></button>
+      <button class="key" data-key="ff" type="button"><span>FF</span></button>
+    </div>
+
+    <div class="switches">
+      <label class="switch">
+        <input type="checkbox" id="fxToggle" checked />
+        <span>1992 TAPE</span>
+      </label>
+      <button class="ghost" id="demoBtn" type="button">Load demo tape</button>
+      <button class="ghost" id="dropHint" type="button">Drop an audio file…</button>
+      <input type="file" id="fileInput" accept="audio/*" hidden />
+    </div>
+
+    <ol class="log" id="log" aria-label="Messages on this tape"></ol>
+  </section>
+
+  <p class="note">
+    Judges: no microphone needed. Press <strong>Load demo tape</strong> — the machine ships with three
+    synthesised messages so the tape-degradation chain can be heard without granting mic access.
+  </p>
+</main>
+<script src="./app.js"></script>
+</body>
+</html>
