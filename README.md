@@ -3,10 +3,10 @@
 A 1992 tape answering machine, resurrected in the browser — leave a message for someone who can no
 longer pick up.
 
-<!-- SCREENSHOT: drop a 1200x750 capture of the machine here, e.g. ![TAPE 13](docs/screenshot.png) -->
+![TAPE 13 — the machine, mid-playback](docs/screenshot.png)
 
-Entry for **Kiroween 2026**, category **Resurrection**. Zero backend, zero
-dependencies, zero build step.
+Entry for **Kiroween 2026**, category **Resurrection**. Live at
+<https://onezion12344.github.io/tape-13/>. Zero backend, zero dependencies, zero build step.
 
 ## Run it
 
